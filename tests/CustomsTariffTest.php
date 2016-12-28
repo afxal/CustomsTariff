@@ -12,4 +12,12 @@ class CustomsTariffTest extends TestCase
         $this->assertNotEmpty($ct->getList());
     }
 
+
+    public function testFindCode()
+    {
+        $ct =  new CustomsTariff();
+        $ct->findCode('0302310000');
+        $this->assertNotEmpty($ct->getList());
+    }
+
 }
