@@ -85,7 +85,6 @@ class CustomsTariff {
 
             }
             $rows[] = $tds;
-
         }
 
         $this->list = $rows;

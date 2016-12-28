@@ -1,6 +1,7 @@
 {
-    "name": "apo/customs-tarrif",
-    "description": "Maldives Customs service tarrif query",
+    "name": "apo/customs-tariff",
+    "description": "Maldives Customs service, tariff query library",
+    "keywords": ["maldives", "customs", "tariff"],
     "type": "library",
     "license": "MIT",
     "authors": [
