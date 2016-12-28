@@ -64,12 +64,10 @@ class CustomsTariff {
         return $this->url.'?'.http_build_query($url);
     }
 
-    private function getData()
+    public function domCrawler($domObj)
     {
-        $this->raw = file_get_contents($this->buildUrl());
-        
         $crawler = new Crawler();
-        $crawler->addHTMLContent($this->raw);
+        $crawler->addHTMLContent($domObj);
 
         $rows = array();
         $tr_elements = $crawler->filterXPath('//table/tr');
@@ -87,7 +85,14 @@ class CustomsTariff {
             $rows[] = $tds;
         }
 
-        $this->list = $rows;
+        return $rows;
+    }
+
+    private function getData()
+    {
+        $this->raw = file_get_contents($this->buildUrl());
+
+        $this->list = $this->domCrawler($this->raw);
     }
 
 }
