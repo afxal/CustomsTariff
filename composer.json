@@ -1,0 +1,26 @@
+{
+    "name": "apo/customs-tarrif",
+    "description": "Maldives Customs service tarrif query",
+    "type": "library",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Mohamed Afzal",
+            "email": "afuthexal@gmail.com"
+        }
+    ],
+    "minimum-stability": "stable",
+    "require": {
+        "php": ">=5.4.0",
+        "symfony/dom-crawler": "^3.2",
+        "symfony/css-selector": "^3.2"
+    },
+    "require-dev": {
+        "phpunit/phpunit": "^5.7"
+    },
+    "autoload": {
+        "psr-4": {
+            "Apo\\CustomsTariff\\": "src/"
+        }
+    }
+}
